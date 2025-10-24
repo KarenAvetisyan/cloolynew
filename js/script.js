@@ -26,26 +26,43 @@ document.addEventListener('DOMContentLoaded', function(){
         }
 
         // Появление карточки при клике или ховере 
-        const cartBtn = document.querySelector('.header-cart__btn');
-        const cartWrap = document.querySelector('.headerCart-item__wrap');
+        const cartBtn = select('.header-cart__btn');
+        const cartWrap = select('.headerCart-item__wrap');
+        const overlay = select('.js-overlay');
+        const body = document.body;
 
-        if (cartBtn && cartWrap) {
-        // Toggle cart visibility on button click
+        if (cartBtn && cartWrap && overlay) {
         cartBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        cartWrap.classList.toggle('_show');
+                e.preventDefault();
+
+                const isShown = cartWrap.classList.toggle('_show');
+                overlay.classList.toggle('_active', isShown);
+
+                if (isShown) {
+                body.style.overflow = 'hidden'; // блокируем скролл
+                } else {
+                body.style.overflow = ''; // возвращаем как было
+                }
         });
 
-        // Hide cart when clicking outside
         document.addEventListener('click', (e) => {
-        const isClickInside =
-        cartWrap.contains(e.target) || cartBtn.contains(e.target);
+                const isClickInside = cartWrap.contains(e.target) || cartBtn.contains(e.target);
 
-        if (!isClickInside) {
-        cartWrap.classList.remove('_show');
-        }
+                if (!isClickInside) {
+                cartWrap.classList.remove('_show');
+                overlay.classList.remove('_active');
+                body.style.overflow = ''; // разблокируем скролл
+                }
+        });
+
+        overlay.addEventListener('click', () => {
+                cartWrap.classList.remove('_show');
+                overlay.classList.remove('_active');
+                body.style.overflow = ''; // разблокируем скролл
         });
         }
+
+
 
         
         // хедер при при скролле 

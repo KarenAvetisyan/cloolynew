@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Clooly - Страница продукта</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Put your description here.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="css/grid.css" as="style" onload="this.rel='stylesheet'"><!-- Простая сетка, кастомные стили -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.css"  as="style" onload="this.rel='stylesheet'"><!-- fancybox ТОЛЬКО для данной страницы  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /><!-- ТОЛЬКО для данной страницы -->
+    <link rel="stylesheet" href="css/main.css"><!-- Основные стили -->
+    <link rel="stylesheet" href="css/product.css" ><!-- Стили ТОЛЬКО для данной страницы  -->
+</head>
+<body>
+
+    <div id="wrapper">
+        <!-- хедер  -->
+        <header class="header">
+            <div class="_container">
+                <div class="header-wrap">
+                    <div class="header-logo">
+                        <a href="index.html"><img src="logo.svg" alt="logo"></a>
+                    </div>
+                    <nav class="header-nav">
+                        <ul class="header-nav__list">
+                            <li><a class="header-nav__link" href="index.html">Главная</a></li>
+                            <li><a class="header-nav__link" href="#">Каталог</a></li>
+                            <li><a class="header-nav__link" href="about.html">О нас</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header-right">
+                        <div class="header-cart">
+                            <a href="#" class="header-cart__btn">
+                                <svg width="29" height="34" viewBox="0 0 29 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.50042 9.75H24.3437C24.8483 9.74994 25.347 9.85901 25.8055 10.0697C26.2641 10.2804 26.6716 10.5878 27.0003 10.9708C27.3289 11.3538 27.5708 11.8033 27.7094 12.2885C27.8481 12.7738 27.8801 13.2832 27.8034 13.782L25.6072 28.048C25.4165 29.2878 24.7883 30.4183 23.8362 31.235C22.884 32.0516 21.671 32.5004 20.4167 32.5H8.42567C7.17162 32.4999 5.95901 32.051 5.00727 31.2344C4.05553 30.4178 3.42753 29.2875 3.23692 28.048L1.04067 13.782C0.963963 13.2832 0.996023 12.7738 1.13465 12.2885C1.27328 11.8033 1.5152 11.3538 1.84382 10.9708C2.17245 10.5878 2.58 10.2804 3.03854 10.0697C3.49709 9.85901 3.99578 9.74994 4.50042 9.75Z" stroke="#1E2733" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9.17188 15V6.25C9.17188 4.85761 9.725 3.52226 10.7096 2.53769C11.6941 1.55312 13.0295 1 14.4219 1C15.8143 1 17.1496 1.55312 18.1342 2.53769C19.1188 3.52226 19.6719 4.85761 19.6719 6.25V15" stroke="#1E2733" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                            <div class="headerCart-item__wrap">
+                                <div class="headerCart-title _h2">Корзина</div>
+                                <div class="headerCart-item">
+                                    <div class="headerCart-item__img">
+                                        <img src="img/order-item-img.webp" alt="cart img">
+                                    </div>
+                                    <div class="headerCart-item__info">
+                                        <div class="headerCart-item__info-title">Спорт и восстановление</div>
+                                        <a href="#" class="headerCart-item__info-remove">Удалить</a>
+                                    </div>
+                                    <div class="headerCart-item__price-wrap">
+                                        <div class="headerCart-item__price">1999<span>₽</span></div>
+                                    </div>
+                                </div>
+                                <div class="headerCart-item">
+                                    <div class="headerCart-item__img">
+                                        <img src="img/order-item-img.webp" alt="cart img">
+                                    </div>
+                                    <div class="headerCart-item__info">
+                                        <div class="headerCart-item__info-title">Детокс-бокс</div>
+                                        <div class="headerCart-item__info-title _fw-m">Цена если вы оформите подписку</div>
+                                        <a href="sub.html" class="headerCart-item__info-sub">Перейти к подписке</a>
+                                    </div>
+                                    <div class="headerCart-item__price-wrap">
+                                        <div class="headerCart-item__priceOld">1899₽</div>
+                                        <div class="headerCart-item__price">1600<span>₽</span></div>
+                                        <a href="#" class="headerCart-item__info-remove">Удалить</a>
+                                    </div>
+                                </div>
+                                <div class="headerCart-item__delivery">
+                                    <div class="headerCart-item__delivery-txt">Доставка</div>
+                                    <div class="headerCart-item__delivery-price">600<span>₽</span></div>
+                                </div>
+                                <div class="headerCart-item__total">
+                                    <div class="headerCart-item__total-title">Итого</div>
+                                    <div class="headerCart-item__total-price">4498<span>₽</span></div>
+                                </div>
+                                <a href="#" class="headerCart-item__btn _primaryBtn">Перейти к оформлению</a>
+                            </div>
+                        </div>
+                        <div class="header-login">
+                            <a href="#" class="header-login__btn _primaryBtn">Войти</a>
+                        </div>
+                    </div>
+                    <div class="header-burger js-burger _d-mx-l">
+                        <span></span>
+                    </div>
+                    <div class="js-overlay"></div>
+                </div>
+            </div>
+        </header>
+        <!-- баннер - Перезагрузка красоты изнутри -->
+        <section class="productBanner">
+            <div class="_container">
+                <div class="_row">
+                    <div class="_cl-l-7">
+                        <div class="productBanner-wrap">
+                            <h1 class="productBanner-title _h1-large">Перезагрузка красоты изнутри</h1>
+                            <div class="productBanner-info">
+                                <div class="productBanner-info__title">Бокс «Детокс»</div>
+                                <p class="productBanner-info__txt">Комплексное очищение и восстановление, чтобы вернуть коже свежесть, телу лёгкость и внутреннюю гармонию.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="_cl-l-5">
+                        <div class="productBanner-img">
+                            <img src="img/krasota-iznutri.webp" alt="clooly">
+                        </div>
+                    </div>
+                </div>  
+            </div>
+            <div class="productBanner-bottom">
+                <div class="_container productBanner-bottom__container">
+                    <div class="_row _row-gap">
+                        <div class="_cl-m-6">
+                            <p class="productBanner-bottom__txt">Наша продукция сертифицирована в РФ и производится по международным стандартам</p>
+                        </div>
+                        <div class="_cl-m-6">
+                            <ul class="productBanner-bottom__icons">
+                                <li><img src="img/icons/cert-icon1.svg" alt="icon"></li>
+                                <li><img src="img/icons/cert-icon2.svg" alt="icon"></li>
+                                <li><img src="img/icons/cert-icon3.svg" alt="icon"></li>
+                                <li><img src="img/icons/cert-icon4.svg" alt="icon"></li>
+                                <li><span>GMP</span> CERTIFIED</li>
+                                <li><span>ISO</span> CERTIFIED</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Мы позаботились о деталях, чтобы вы думали только о результате  -->
+        <section class="productDetail _p-y">
+            <div class="_container">
+                <div class="_w-100 _text-center _title" data-inviewport="obs__moveTop">
+                    <h2 class="_h2">Мы позаботились о деталях, чтобы вы думали только о результате</h2>
+                </div>
+                <div class="_row _row-gap">
+                    <div class="_cl-l-4 _cl-m-6">
+                        <div class="productDetail-item" data-inviewport="obs__moveTop">
+                            <img loading="lazy" src="img/doctor.webp" alt="img" class="productDetail-item__img">
+                            <div class="productDetail-item__info">
+                                <div class="productDetail-item__info-title">Создали формулы вместе с экспертами по питанию</div>
+                                <div class="productDetail-item__info-txt">Каждый ингредиент тщательно подобран и усиливает действие других.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="_cl-l-4 _cl-m-6">
+                        <div class="productDetail-item" data-inviewport="obs__moveTop">
+                            <img loading="lazy" src="img/box-white1.webp" alt="img" class="productDetail-item__img">
+                            <div class="productDetail-item__info">
+                                <div class="productDetail-item__info-title">Продумали курс до мелочей</div>
+                                <div class="productDetail-item__info-txt">Вы получаете готовый план приёма с оптимальными компонентами для ваших целей.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="_cl-l-4 _cl-m-6">
+                        <div class="productDetail-item" data-inviewport="obs__moveTop">
+                            <img loading="lazy" src="img/box-white2.webp" alt="img" class="productDetail-item__img">
+                            <div class="productDetail-item__info">
+                                <div class="productDetail-item__info-title">Упаковали всё в удобный формат</div>
+                                <div class="productDetail-item__info-txt">Теперь забота о здоровье — это не обязанность, а ежедневный комфортный ритуал.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Ваш набор — под ваши задачи  -->
+        <section class="productKit">
+            <div class="_container">
+                <div class="_w-100 _text-center _title" data-inviewport="obs__moveTop">
+                    <h2 class="_h2">Ваш набор — под ваши задачи</h2>
+                    <p class="productKit-subtitle _fw-m">Подберите оптимальный вариант под цель. Или объедините несколько — для комплексного результата.</p>
+                </div>
+                <div class="_w-100 _text-center" data-inviewport="obs__moveTop">
+                    <ul class="productKit-ingradients">
+                        <li><img loading="lazy" src="img/icons/bottle-ic.svg" alt="icon"> <span>Изотоник</span></li>
+                        <li><img loading="lazy" src="img/icons/stock-ic.svg" alt="icon"> <span>Протеиновые батончики</span></li>
+                        <li><img loading="lazy" src="img/icons/energy-ic.svg" alt="icon"> <span>Магний</span></li>
+                        <li><img loading="lazy" src="img/icons/bath-ic.svg" alt="icon"> <span>Соль для ванн</span></li>
+                        <li><img loading="lazy" src="img/icons/leaf-ic.svg" alt="icon"> <span>Бальзам для ног</span></li>
+                        <li><img loading="lazy" src="img/icons/heart-ic.svg" alt="icon"> <span>Ягоды</span></li>
+                        <li><img loading="lazy" src="img/icons/tablet-ic.svg" alt="icon"> <span>Витамины</span></li>
+                        <li><img loading="lazy" src="img/icons/fire-ic.svg" alt="icon"> <span>Орехи</span></li>
+                    </ul>
+                </div>
+                <div class="_row" data-inviewport="obs__moveTop">
+                    <div class="_cl-l-6 order-l-1">
+                        <!-- дубликат -->
+                        <div class="_d-mx-l">
+                            <div class="productKit-info__title">набор “спорт и восстановление”</div>
+                            <ul class="productKit-info__list">
+                                <li class="c-orange">ускоряет восстановление после тренировок</li>
+                                <li class="c-orange">поддерживает уровень энергии</li>
+                                <li class="c-blue">снижает мышечное напряжение</li>
+                                <li class="c-blue">укрепляет выносливость</li>
+                                <li class="c-green">улучшает качество сна</li>
+                                <li class="c-green">повышает тонус и концентрацию</li>
+                            </ul>
+                        </div>
+                        <!-- конец дубликат -->
+                        <div class="productKit-img__wrap">
+                            <div class="productKit-img__wrap-inner">
+                                <a href="img/box-variant1.webp" data-fancybox="productKit-gallery">
+                                    <img src="img/box-variant1.webp" alt="img" class="productKit-img js-productKit-img">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="_cl-l-6 order-l-3">
+                        <div class="productKit-img__variants">
+                            <label for="productKit-img-1">
+                                <input type="radio" name="productKit-img" id="productKit-img-1" class="productKit-img__input js-productKit-img__input" value="img/box-variant1.webp">
+                                <img src="img/box-variant1.webp" alt="img">
+                            </label>
+                            <label for="productKit-img-2">
+                                <input type="radio" name="productKit-img" id="productKit-img-2" class="productKit-img__input js-productKit-img__input" value="img/box-variant2.webp">
+                                <img src="img/box-variant2.webp" alt="img">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="_cl-l-6 order-l-2">
+                        <div class="productKit-info">
+                            <div class="productKit-info__top">
+                                <!-- дубликат -->
+                                <div class="_d-mn-l">
+                                    <div class="productKit-info__title">набор “спорт и восстановление”</div>
+                                    <ul class="productKit-info__list">
+                                        <li class="c-orange">ускоряет восстановление после тренировок</li>
+                                        <li class="c-orange">поддерживает уровень энергии</li>
+                                        <li class="c-blue">снижает мышечное напряжение</li>
+                                        <li class="c-blue">укрепляет выносливость</li>
+                                        <li class="c-green">улучшает качество сна</li>
+                                        <li class="c-green">повышает тонус и концентрацию</li>
+                                    </ul>
+                                </div>
+                                <!-- конец дубликат -->
+                                <div class="productKit-comps__txt">Состав набора:</div>
+                                <ul class="productKit-comps__list">
+                                    <li><img loading="lazy" src="img/vitamin-pc-big.webp" alt="img"> <span>Витамины</span> <span class="productKit-comps__popup-btn" data-id="_modalElement" data-show-modal="">!</span></li>
+                                    <li><img loading="lazy" src="img/magni-pc-big.webp" alt="img"> <span>Магний</span> <span class="productKit-comps__popup-btn" data-id="_modalElement" data-show-modal="">!</span></li>
+                                    <li><img loading="lazy" src="img/salt-pc-big.webp" alt="img"> <span>Соль для ванн</span> <span class="productKit-comps__popup-btn" data-id="_modalElement" data-show-modal="">!</span></li>
+                                    <li><img loading="lazy" src="img/balzam-pc-big.webp" alt="img"> <span>Бальзам для ног</span> <span class="productKit-comps__popup-btn" data-id="_modalElement" data-show-modal="">!</span></li>
+                                    <li><img loading="lazy" src="img/baton-pc-big.webp" alt="img"> <span>Протеиновые батончик</span> <span class="productKit-comps__popup-btn" data-id="_modalElement" data-show-modal="">!</span></li>
+                                    <li><img loading="lazy" src="img/fruits-pc-big.webp" alt="img"> <span>Ягоды/Орехи</span> <span class="productKit-comps__popup-btn" data-id="_modalElement" data-show-modal="">!</span></li>
+                                </ul>
+                            </div>
+                            <div class="productKit-info__bottom">
+                                <div class="productKit-info__bottom-wrap">
+                                    <div class="productKit-info__price">2300 ₽</div>
+                                    <a href="#" class="productKit-info__more"  data-id="_modalProductKit" data-show-modal="">Подробнее о наборе</a>
+                                </div>
+                                <div class="productKit-info__btns">
+                                    <a href="#" class="productKit-info__btn _primaryBtn">Добавить в корзину</a>
+                                    <a href="#" class="productKit-info__btn _primaryBtn2">Приобрести подписку</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Забота о себе — каждый месяц в одной коробке  -->
+        <section class="customBanner _p-y">
+            <div class="_container">
+                <div class="customBanner-wrap _blue" data-inviewport="obs__full-width">
+                    <div class="customBanner-info _big" data-inviewport="obs__moveTop">
+                        <h2 class="customBanner-info__title">Забота о себе — каждый месяц в одной коробке</h2>
+                        <p class="customBanner-info__txt">Оформите ежемесячную подписку и превратите заботу о себе в привычку.Вместо одноразовых покупок — стабильный ритм: месяц за месяцем вы получаете всё, что нужно для энергии, спокойствия и восстановления.</p>
+                    </div>
+                    <div class="customBanner-sub" data-inviewport="obs__bounce">
+                        <div class="customBanner-sub__top">
+                            <div class="customBanner-sub__month">Сlooly на месяц</div>
+                            <div class="customBanner-sub__price">1200 ₽</div>
+                            <div class="customBanner-sub__priceOld">2200 ₽</div>
+                            <ul class="customBanner-sub__list">
+                                <li>Бесплатная доставка</li>
+                                <li>Экономия до 20%</li>
+                                <li>Эксклюзивные продукты только для подписчиков</li>
+                                <li>Удобно — не нужно каждый раз заказывать</li>
+                            </ul>
+                        </div>
+                        <div class="customBanner-sub__bottom">
+                            <a href="#" class="_primaryBtn">Оформить подписку</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Каждый бокс с подарком!  -->
+        <section class="customBanner">
+            <div class="_container">
+                <div class="customBanner-wrap _blue" data-inviewport="obs__full-width">
+                    <div class="customBanner-info" data-inviewport="obs__moveTop">
+                        <h2 class="customBanner-info__title">Каждый бокс <br><span class="prize">с&nbsp;подарком!</span></h2>
+                        <p class="customBanner-info__txt">Каждый наш бокс — это не просто набор, а маленький праздник! Внутри вас ждёт уникальный подарок, который обязательно поднимет настроение</p>
+                        <div class="customBanner-img _d-mx-l" data-inviewport="obs__bounce">
+                            <img loading="lazy" src="img/prize-boxes.webp" alt="catalog">
+                        </div>
+                        <a href="#" class="customBanner-info__link _primaryBtn">Каталог</a>
+                    </div>
+                    <div class="customBanner-img _big _d-mn-l" data-inviewport="obs__bounce">
+                        <img loading="lazy" src="img/prize-boxes.webp" alt="catalog">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- faq  -->
+        <section class="faq _p-y">
+            <div class="_container">
+                <div class="_w-100 _text-center _title" data-inviewport="obs__moveTop">
+                    <h2 class="_h2">Часто задаваемые вопросы</h2>
+                </div>
+                <div class="faq-dropdown__wrap">
+                    <div class="faq-dropdown dropdown-item is-open" data-inviewport="obs__moveBottom">
+                        <div class="faq-dropdown__head drop-head">Что входит в бокс?</div>
+                        <div class="faq-dropdown__panel panel">
+                            <p>В каждом боксе — тщательно подобранные товары для здоровья и заботы о себе: витамины, натуральные продукты, косметика и аксессуары. Состав может меняться в зависимости от темы месяца.</p>
+                        </div>
+                    </div>
+                    <div class="faq-dropdown dropdown-item" data-inviewport="obs__moveBottom">
+                        <div class="faq-dropdown__head drop-head">Подходит ли бокс в подарок?</div>
+                        <div class="faq-dropdown__panel panel">
+                            <p>В каждом боксе — тщательно подобранные товары для здоровья и заботы о себе: витамины, натуральные продукты, косметика и аксессуары. Состав может меняться в зависимости от темы месяца.</p>
+                        </div>
+                    </div>
+                    <div class="faq-dropdown dropdown-item" data-inviewport="obs__moveBottom">
+                        <div class="faq-dropdown__head drop-head">Как часто выходит новый бокс?</div>
+                        <div class="faq-dropdown__panel panel">
+                            <p>В каждом боксе — тщательно подобранные товары для здоровья и заботы о себе: витамины, натуральные продукты, косметика и аксессуары. Состав может меняться в зависимости от темы месяца.</p>
+                        </div>
+                    </div>
+                    <div class="faq-dropdown dropdown-item" data-inviewport="obs__moveBottom">
+                        <div class="faq-dropdown__head drop-head">Есть ли доставка по всей России?</div>
+                        <div class="faq-dropdown__panel panel">
+                            <p>В каждом боксе — тщательно подобранные товары для здоровья и заботы о себе: витамины, натуральные продукты, косметика и аксессуары. Состав может меняться в зависимости от темы месяца.</p>
+                        </div>
+                    </div>
+                    <div class="faq-dropdown dropdown-item" data-inviewport="obs__moveBottom">
+                        <div class="faq-dropdown__head drop-head">Можно ли выбрать состав бокса?</div>
+                        <div class="faq-dropdown__panel panel">
+                            <p>В каждом боксе — тщательно подобранные товары для здоровья и заботы о себе: витамины, натуральные продукты, косметика и аксессуары. Состав может меняться в зависимости от темы месяца.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- продукты -->
+        <section class="products" id="_products">
+            <div class="_container">
+                <div class="_w-100 _text-center _title" data-inviewport="obs__moveTop">
+                    <h2 class="_h2">Другие продукты</h2>
+                </div>
+                <div class="_row products-gap">
+                    <div class="_cl-l-6">
+                        <div class="product-item _green2 product-item__2" data-inviewport="obs__full-width">
+                            <div class="product-item__info" data-inviewport="obs__moveBottom">
+                                <h2 class="product-item__title">Детокс-бокс</h2>
+                                <ul class="product-item__list">
+                                    <li>Травяной чай </li>
+                                    <li>Скраб для тела</li>
+                                    <li>Коллаген</li>
+                                    <li>соль для ванны</li>
+                                    <li>Маска для лица </li>
+                                    <li>Батончики</li>
+                                </ul>
+                                <a href="perezagruzka-krasoty-iznutri.html" class="_primaryBtn product-item__link">Подробнее</a>
+                            </div>
+                            <div class="product-item__img" data-inviewport="obs__bounce">
+                                <img loading="lazy" src="img/detox.webp" alt="detox">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="_cl-l-6 products-gap">
+                        <div class="product-item _orange product-item__3" data-inviewport="obs__full-width">
+                            <div class="product-item__info" data-inviewport="obs__moveBottom">
+                                <h2 class="product-item__title">Glow-бокс</h2>
+                                <ul class="product-item__list">
+                                    <li>Чай для женского здоровья</li>
+                                    <li>Маски для лица</li>
+                                    <li>Коллаген / биотин </li>
+                                    <li>Скраб для тела </li>
+                                    <li>Батончики </li>
+                                    <li>Соль / бомбочка для ванн </li>
+                                </ul>
+                                <a href="#" class="_primaryBtn product-item__link">Подробнее</a>
+                            </div>
+                            <div class="product-item__img" data-inviewport="obs__bounce">
+                                <img loading="lazy" src="img/glowbox.webp" alt="glowbox">
+                            </div>
+                        </div>
+                        <div class="product-item _orange product-item__4" data-inviewport="obs__full-width">
+                            <div class="product-item__info" data-inviewport="obs__moveBottom">
+                                <h2 class="product-item__title">Энергия на день</h2>
+                                <ul class="product-item__list">
+                                    <li>Чай мате</li>
+                                    <li>Батончики </li>
+                                    <li>Шипучие витамины </li>
+                                    <li>Орехи / сухофрукты </li>
+                                    <li>Коллаген</li>
+                                    <li>Скраб для тела </li>
+                                    <li>Патчи для глаз</li>
+                                </ul>
+                                <a href="zaryad-tela-uma.html" class="_primaryBtn product-item__link">Подробнее</a>
+                            </div>
+                            <div class="product-item__img" data-inviewport="obs__bounce">
+                                <img loading="lazy" src="img/baton.webp" alt="baton">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- footer  -->
+        <footer class="footer">
+            <div class="_container">
+                <div class="_row">
+                    <div class="_cl footer-top">
+                        <div class="_row">
+                            <div class="_cl-l-5">
+                                <div class="footer-top__logo">
+                                    <img loading="lazy" width="413" height="111" src="logo-dark-big.webp" alt="logo">
+                                </div>
+                            </div>
+                            <div class="_cl-l-5">
+                                <p class="footer-top__txt">Мы создаём боксы, которые приносят пользу
+                                и радость. Внутри — только тщательно отобранные продукты для здоровья, красоты и гармонии.
+                                Всё, чтобы вы чувствовали себя лучше каждый день.</p>
+                            </div>
+                            <div class="_cl-l-2"></div>
+                        </div>
+                    </div>
+                    <div class="_cl footer-middle">
+                        <div class="_row">
+                            <div class="_cl-l-5">
+                                <ul class="footer-middle__socials">
+                                    <li><a href="#"><img loading="lazy" src="img/icons/instagram.svg" alt="instagram"></a></li>
+                                    <li><a href="#"><img loading="lazy" src="img/icons/ws.svg" alt="whatsapp"></a></li>
+                                    <li><a href="#"><img loading="lazy" src="img/icons/telegram.svg" alt="telegram"></a></li>
+                                </ul>
+                            </div>
+                            <div class="_cl-l-7">
+                                <div class="footer-middle__list-wrap">
+                                    <div class="footer-middle__list-wrap-inner">
+                                        <div class="footer-middle__list-title">Главная</div>
+                                        <ul class="footer-middle__list">
+                                            <li><a href="#">Каталог</a></li>
+                                            <li><a href="#">О&nbsp;нас</a></li>
+                                            <li><a href="contact.html">Контакты</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="footer-middle__list-wrap-inner">
+                                        <div class="footer-middle__list-title">Контакты</div>
+                                        <ul class="footer-middle__list">
+                                            <li><a href="mailto:team@clooly.ru">team@clooly.ru</a></li>
+                                            <li><a href="tel:89003344354">8 (900) 334 - 43 - 54</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="footer-middle__list-wrap-inner">
+                                        <div class="footer-middle__list-title">Документы</div>
+                                        <ul class="footer-middle__list">
+                                            <li><a href="#">Сертификаты</a></li>
+                                            <li><a href="#">Договор оферты</a></li>
+                                            <li><a href="#">Правила акций</a></li>
+                                            <li><a href="#">Отказ от ответственности</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="_cl footer-bottom">
+                        <div class="_row">
+                            <div class="_cl-l-5"><a href="#">Политика конфиденциальности</a></div>
+                            <div class="_cl-l-4"><a href="#">Пользовательское соглашение</a></div>
+                            <div class="_cl-l-3"><a href="#">Доставка и оплата</a></div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- modals  -->
+    <div class="modal modalElement" id="_modalElement">
+        <div class="modal-overlay" data-close-modal></div>
+        <div class="m-container">
+            <div class="m-close" data-close-modal></div>
+            <div class="m-content">
+                <div class="modalElement-wrap">
+                    <div class="modalElement-head">
+                        <h2 class="modalElement-head__title">Магний +B6</h2>
+                        <div class="_row">
+                            <div class="_cl-m-5">
+                                <div class="modalElement-head__item">
+                                    <div class="modalElement-head__item-icon">
+                                        <img loading="lazy" src="img/icons/heart-shake.svg" alt="icon">
+                                    </div>
+                                    <div class="modalElement-head__item-title">Оптимальная<br> дозировка</div>
+                                    <div class="modalElement-head__item-txt">
+                                        В 1 капсуле содержится 400мг бисглицината магния и 6 мг витамина B6. Такая дозировка помогает регулировать норму потребления и использовать с другими формами
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="_cl-m-4">
+                                <div class="modalElement-head__item">
+                                    <div class="modalElement-head__item-icon">
+                                        <img loading="lazy" src="img/icons/bioaccept.svg" alt="icon">
+                                    </div>
+                                    <div class="modalElement-head__item-title">Высокая<br> Биодоступность</div>
+                                    <div class="modalElement-head__item-txt">
+                                        Содержит магний в форме бисглицината -хелатное соединение который хорошо усваивается и восполняет дефицит магния
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="_cl-m-3"></div>
+                        </div>
+                        <div class="modalElement-head__img-wrap">
+                            <img loading="lazy" src="img/magni-big.webp" alt="magnij" class="modalElement-head__img">
+                        </div>
+                        <img loading="lazy" alt="halal" src="img/icons/halal.png" class="modalElement-head__img-halal">
+                    </div>
+                    <div class="modalElement-info">
+                        <div class="modalElement-info__holder">Описание:</div>
+                        <p>Magnesium bisglycinate + витамин b6 от Clooly - высокоусвояемая хелатная форма магния, которая подходит для тех, кто чувствителен к другим формам этого минерала. Она представляет собой соединение магния с двумя молекулами глицина, благодаря чему обладает высоким уровнем абсорбции, не раздражает слизистые оболочки желудочно-кишечного тракта, не вызывает слабительного эффекта.</p>
+                        <div class="line-sep"></div>
+                        <div class="modalElement-info__holder">Дозировка:</div>
+                        <div class="_row">
+                            <div class="_cl-m-6">
+                                <div class="modalElement-info__dosage-wrap">
+                                    <div class="modalElement-info__dosage">
+                                        <p>Дозировка содержит (1 капсула): <span>Магний (Магния бисглицинат)</span></p>
+                                    </div>
+                                    <div class="modalElement-info__dosage-wrap-inner">
+                                        <span>80 мг</span>
+                                        <span>400 мг</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="_cl-m-6">
+                                <div class="modalElement-info__dosage-wrap">
+                                    <div class="modalElement-info__dosage">
+                                        <p><span>Магний (Магния бисглицинат)</span></p>
+                                    </div>
+                                    <div class="modalElement-info__dosage-wrap-inner">
+                                        <span>1.5 мг</span>
+                                        <span>2 мг</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="fz-14">Рекомендации по применению: принимать взрослым по 2 капсулы 2 раза в день во время еды</p>
+                        <div class="line-sep"></div>
+                        <div class="modalElement-info__holder">Состав:</div>
+                        <p>магния бисглицинат; желатиновая капсула (желатин говяжий); диоксид кремния (антислеживающий агент); пиридоксина гидрохлорид (витамин В6)</p>
+                        <div class="line-sep"></div>
+                        <div class="modalElement-info__holder">Противопоказания:</div>
+                        <p>Индивидуальная непереносимость компонентов продукта, беременность, кормление грудью. Перед применением рекомендуется проконсультироваться с врачом.</p>
+                        <div class="line-sep"></div>
+                        <div class="modalElement-info__holder">Показания:</div>
+                        <ul class="modalElement-info__list">
+                            <li>- в качестве дополнительного источника магния и витамина B 6;</li>
+                            <li>- поддерживает нервную систему;</li>
+                            <li>- защищает от стресса; </li>
+                            <li>- улучшает работу сердечно - сосудистой системы;</li>
+                            <li>- способствует здоровью костей</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modalProductKit" id="_modalProductKit">
+        <div class="modal-overlay" data-close-modal></div>
+        <div class="m-container">
+            <div class="m-close" data-close-modal></div>
+            <div class="m-content">
+                <div class="modalProductKit-wrap">
+                    <div class="_row" data-inviewport="obs__moveTop">
+                        <div class="_cl-l-6">
+                            <!-- дубликат -->
+                            <div class="_d-mx-l">
+                                <div class="productKit-info__title">набор “спорт и восстановление”</div>
+                                <ul class="productKit-info__list">
+                                    <li class="c-orange">ускоряет восстановление после тренировок</li>
+                                    <li class="c-orange">поддерживает уровень энергии</li>
+                                    <li class="c-blue">снижает мышечное напряжение</li>
+                                    <li class="c-blue">укрепляет выносливость</li>
+                                    <li class="c-green">улучшает качество сна</li>
+                                    <li class="c-green">повышает тонус и концентрацию</li>
+                                </ul>
+                            </div>
+                            <!-- конец дубликат -->
+                            <div class="productKit-img__wrap">
+                                <div class="productKit-img__wrap-inner">
+                                    <a href="img/box-variant1.webp" data-fancybox="productKit-gallery-modal">
+                                        <img src="img/box-variant1.webp" alt="img" class="productKit-img">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="_cl-l-6">
+                            <div class="productKit-info">
+                                <div class="productKit-info__top">
+                                    <!-- дубликат -->
+                                    <div class="_d-mn-l">
+                                        <div class="productKit-info__title">набор “спорт и восстановление”</div>
+                                        <ul class="productKit-info__list">
+                                            <li class="c-orange">ускоряет восстановление после тренировок</li>
+                                            <li class="c-orange">поддерживает уровень энергии</li>
+                                            <li class="c-blue">снижает мышечное напряжение</li>
+                                            <li class="c-blue">укрепляет выносливость</li>
+                                            <li class="c-green">улучшает качество сна</li>
+                                            <li class="c-green">повышает тонус и концентрацию</li>
+                                        </ul>
+                                    </div>
+                                    <!-- конец дубликат -->
+                                     <p>Комплекс для спортивного восстановления. Снимает усталость, поддерживает тонус и способствует быстрому возвращению к активному ритму жизни.</p>
+                                     <div class="_w-100">Состав набора:</div>
+                                     <p class="_fw-b">Магний, Витамины, Соль для ванн, Бальзам для ног, Протеиновые батончики, Ягоды, Орехи</p>
+                                </div>
+                                <div class="productKit-info__bottom">
+                                    <div class="productKit-info__bottom-wrap">
+                                        <div class="productKit-info__price">2300 ₽</div>
+                                    </div>
+                                    <div class="productKit-info__btns">
+                                        <a href="#" class="productKit-info__btn _primaryBtn">Добавить в корзину</a>
+                                        <a href="#" class="productKit-info__btn _primaryBtn2">Приобрести подписку</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modalProductKit-composition">
+                    <div class="modalProductKit-composition__txt">Подробный состав:</div>
+                    <div class="modalProductKit-composition__txt2"><span>6</span> товаров</div>
+                </div>
+                <div class="modalProductKit-swiper">
+                    <div class="swiper modalProductKitSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="modalProductKit-swiper__item">
+                                    <div class="modalProductKit-swiper__item-img">
+                                        <img loading="lazy" src="img/magni-pc-big.webp" alt="img">
+                                    </div>
+                                    <div class="modalProductKit-swiper__item-info">
+                                        <p>Магний+B6</p>
+                                        <p class="o-half">80 мг х 30 капсул</p>
+                                        <p class="_fz-16">Расслабляет мышцы, снимает напряжение и улучшает сон.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="modalProductKit-swiper__item">
+                                    <div class="modalProductKit-swiper__item-img">
+                                        <img loading="lazy" src="img/vitamin-pc-big.webp" alt="img">
+                                    </div>
+                                    <div class="modalProductKit-swiper__item-info">
+                                        <p>Витамины</p>
+                                        <p class="o-half">120 мг х 30 капсул</p>
+                                        <p class="_fz-16">Поддерживают энергию, иммунитет и восстановление после нагрузок.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="modalProductKit-swiper__item">
+                                    <div class="modalProductKit-swiper__item-img">
+                                        <img loading="lazy" src="img/salt-pc-big.webp" alt="img">
+                                    </div>
+                                    <div class="modalProductKit-swiper__item-info">
+                                        <p>Соль для ванн</p>
+                                        <p class="o-half">80 мг х 30 капсул</p>
+                                        <p class="_fz-16">Снимает усталость и помогает восстановить мышцы</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="modalProductKit-swiper__item">
+                                    <div class="modalProductKit-swiper__item-img">
+                                        <img loading="lazy" src="img/balzam-pc-big.webp" alt="img">
+                                    </div>
+                                    <div class="modalProductKit-swiper__item-info">
+                                        <p>Соль для ванн</p>
+                                        <p class="o-half">80 мг х 30 капсул</p>
+                                        <p class="_fz-16">Снимает усталость и помогает восстановить мышцы</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="modalProductKit-swiper__item">
+                                    <div class="modalProductKit-swiper__item-img">
+                                        <img loading="lazy" src="img/baton-pc-big.webp" alt="img">
+                                    </div>
+                                    <div class="modalProductKit-swiper__item-info">
+                                        <p>Соль для ванн</p>
+                                        <p class="o-half">80 мг х 30 капсул</p>
+                                        <p class="_fz-16">Снимает усталость и помогает восстановить мышцы</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="modalProductKit-swiper__item">
+                                    <div class="modalProductKit-swiper__item-img">
+                                        <img loading="lazy" src="img/fruits-pc-big.webp" alt="img">
+                                    </div>
+                                    <div class="modalProductKit-swiper__item-info">
+                                        <p>Соль для ванн</p>
+                                        <p class="o-half">80 мг х 30 капсул</p>
+                                        <p class="_fz-16">Снимает усталость и помогает восстановить мышцы</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.umd.js"></script><!-- fancybox ТОЛЬКО для страницы  продукт -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script><!-- ТОЛЬКО для данной страницы -->
+    <script src="js/product.js"></script><!-- Скрипт ТОЛЬКО для страницы  продукт -->
+</body>
+</html>
+
