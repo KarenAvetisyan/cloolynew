@@ -26,37 +26,27 @@ document.addEventListener('DOMContentLoaded', function(){
         }
 
         // Появление карточки при клике или ховере 
-        const cartBtn = select('.header-cart__btn');
-        const cartWrap = select('.headerCart-item__wrap');
+        const cartBtn = document.querySelector('.header-cart__btn');
+        const cartWrap = document.querySelector('.headerCart-item__wrap');
 
         if (cartBtn && cartWrap) {
-        cartBtn.addEventListener('mouseenter', () => {
-        cartWrap.classList.add('_show');
-        });
-        cartBtn.addEventListener('mouseleave', () => {
-        setTimeout(() => {
-        if (!cartWrap.matches(':hover') && !cartBtn.matches(':hover')) {
-                cartWrap.classList.remove('_show');
-        }
-        }, 100);
-        });
-        cartWrap.addEventListener('mouseenter', () => {
-        cartWrap.classList.add('_show');
-        });
-        cartWrap.addEventListener('mouseleave', () => {
-        setTimeout(() => {
-        if (!cartWrap.matches(':hover') && !cartBtn.matches(':hover')) {
-                cartWrap.classList.remove('_show');
-        }
-        }, 100);
-        });
-
-        // Also toggle on click (for mobile)
+        // Toggle cart visibility on button click
         cartBtn.addEventListener('click', (e) => {
         e.preventDefault();
         cartWrap.classList.toggle('_show');
         });
+
+        // Hide cart when clicking outside
+        document.addEventListener('click', (e) => {
+        const isClickInside =
+        cartWrap.contains(e.target) || cartBtn.contains(e.target);
+
+        if (!isClickInside) {
+        cartWrap.classList.remove('_show');
         }
+        });
+        }
+
         
         // хедер при при скролле 
         let selectHeader = select('.header')
