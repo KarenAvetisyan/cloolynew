@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Clooly - Контакты</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Put your description here.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="css/grid.css" as="style" onload="this.rel='stylesheet'"><!-- Простая сетка, кастомные стили -->
+    <link rel="stylesheet" href="css/main.css"><!-- Основные стили -->
+    <link rel="stylesheet" href="css/contact.css" ><!-- Стили ТОЛЬКО для данной страницы  -->
+</head>
+<body>
+
+    <div id="wrapper">
+        <!-- хедер  -->
+        <header class="header">
+            <div class="_container">
+                <div class="header-wrap">
+                    <div class="header-logo">
+                        <a href="index.html"><img src="logo.svg" alt="logo"></a>
+                    </div>
+                    <nav class="header-nav">
+                        <ul class="header-nav__list">
+                            <li><a class="header-nav__link" href="index.html">Главная</a></li>
+                            <li><a class="header-nav__link" href="#">Каталог</a></li>
+                            <li><a class="header-nav__link" href="about.html">О нас</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header-right">
+                        <div class="header-cart">
+                            <a href="#" class="header-cart__btn">
+                                <svg width="29" height="34" viewBox="0 0 29 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.50042 9.75H24.3437C24.8483 9.74994 25.347 9.85901 25.8055 10.0697C26.2641 10.2804 26.6716 10.5878 27.0003 10.9708C27.3289 11.3538 27.5708 11.8033 27.7094 12.2885C27.8481 12.7738 27.8801 13.2832 27.8034 13.782L25.6072 28.048C25.4165 29.2878 24.7883 30.4183 23.8362 31.235C22.884 32.0516 21.671 32.5004 20.4167 32.5H8.42567C7.17162 32.4999 5.95901 32.051 5.00727 31.2344C4.05553 30.4178 3.42753 29.2875 3.23692 28.048L1.04067 13.782C0.963963 13.2832 0.996023 12.7738 1.13465 12.2885C1.27328 11.8033 1.5152 11.3538 1.84382 10.9708C2.17245 10.5878 2.58 10.2804 3.03854 10.0697C3.49709 9.85901 3.99578 9.74994 4.50042 9.75Z" stroke="#1E2733" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9.17188 15V6.25C9.17188 4.85761 9.725 3.52226 10.7096 2.53769C11.6941 1.55312 13.0295 1 14.4219 1C15.8143 1 17.1496 1.55312 18.1342 2.53769C19.1188 3.52226 19.6719 4.85761 19.6719 6.25V15" stroke="#1E2733" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                            <div class="headerCart-item__wrap">
+                                <div class="headerCart-title _h2">Корзина</div>
+                                <div class="headerCart-item">
+                                    <div class="headerCart-item__img">
+                                        <img src="img/order-item-img.webp" alt="cart img">
+                                    </div>
+                                    <div class="headerCart-item__info">
+                                        <div class="headerCart-item__info-title">Спорт и восстановление</div>
+                                        <a href="#" class="headerCart-item__info-remove">Удалить</a>
+                                    </div>
+                                    <div class="headerCart-item__price-wrap">
+                                        <div class="headerCart-item__price">1999<span>₽</span></div>
+                                    </div>
+                                </div>
+                                <div class="headerCart-item">
+                                    <div class="headerCart-item__img">
+                                        <img src="img/order-item-img.webp" alt="cart img">
+                                    </div>
+                                    <div class="headerCart-item__info">
+                                        <div class="headerCart-item__info-title">Детокс-бокс</div>
+                                        <div class="headerCart-item__info-title _fw-m">Цена если вы оформите подписку</div>
+                                        <a href="sub.html" class="headerCart-item__info-sub">Перейти к подписке</a>
+                                    </div>
+                                    <div class="headerCart-item__price-wrap">
+                                        <div class="headerCart-item__priceOld">1899₽</div>
+                                        <div class="headerCart-item__price">1600<span>₽</span></div>
+                                        <a href="#" class="headerCart-item__info-remove">Удалить</a>
+                                    </div>
+                                </div>
+                                <div class="headerCart-item__delivery">
+                                    <div class="headerCart-item__delivery-txt">Доставка</div>
+                                    <div class="headerCart-item__delivery-price">600<span>₽</span></div>
+                                </div>
+                                <div class="headerCart-item__total">
+                                    <div class="headerCart-item__total-title">Итого</div>
+                                    <div class="headerCart-item__total-price">4498<span>₽</span></div>
+                                </div>
+                                <a href="#" class="headerCart-item__btn _primaryBtn">Перейти к оформлению</a>
+                            </div>
+                        </div>
+                        <div class="header-login">
+                            <a href="#" class="header-login__btn _primaryBtn">Войти</a>
+                        </div>
+                    </div>
+                    <div class="header-burger js-burger _d-mx-l">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- контакты  -->
+        <section class="contact">
+            <div class="_container">
+                <h1 class="contact-title _h1-larger">контакты</h1>
+                <div class="_row">
+                    <div class="contact-item__col _cl-m-6">
+                        <div class="contact-item">
+                            <div class="contact-item__holder">Телефон</div>
+                            <a href="tel:+79980103133" class="contact-item__link">+7 (998) 010-31-33</a>
+                        </div>
+                    </div>
+                    <div class="contact-item__col _cl-m-6">
+                        <div class="contact-item">
+                            <div class="contact-item__holder">Адрес</div>
+                            <div class="contact-item__txt">Россия, г. Раменское, Космонавтов ул., д. 16 кв.163</div>
+                        </div>
+                    </div>
+                    <div class="contact-item__col _cl-m-6">
+                        <div class="contact-item">
+                            <div class="contact-item__holder">Почта</div>
+                            <a href="mailto:newclooly@gmail.com" class="contact-item__link">newclooly@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item__col _cl-m-6">
+                        <div class="contact-item">
+                            <div class="contact-item__holder">Адрес</div>
+                            <div class="contact-item__txt">Казахстан, г. Раменское, Космонавтов ул., д. 16 кв.163</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- footer  -->
+        <footer class="footer">
+            <div class="_container">
+                <div class="_row">
+                    <div class="_cl footer-top">
+                        <div class="_row">
+                            <div class="_cl-l-5">
+                                <div class="footer-top__logo">
+                                    <img loading="lazy" width="413" height="111" src="logo-dark-big.webp" alt="logo">
+                                </div>
+                            </div>
+                            <div class="_cl-l-5">
+                                <p class="footer-top__txt">Мы создаём боксы, которые приносят пользу
+                                и радость. Внутри — только тщательно отобранные продукты для здоровья, красоты и гармонии.
+                                Всё, чтобы вы чувствовали себя лучше каждый день.</p>
+                            </div>
+                            <div class="_cl-l-2"></div>
+                        </div>
+                    </div>
+                    <div class="_cl footer-middle">
+                        <div class="_row">
+                            <div class="_cl-l-5">
+                                <ul class="footer-middle__socials">
+                                    <li><a href="#"><img loading="lazy" src="img/icons/instagram.svg" alt="instagram"></a></li>
+                                    <li><a href="#"><img loading="lazy" src="img/icons/ws.svg" alt="whatsapp"></a></li>
+                                    <li><a href="#"><img loading="lazy" src="img/icons/telegram.svg" alt="telegram"></a></li>
+                                </ul>
+                            </div>
+                            <div class="_cl-l-7">
+                                <div class="footer-middle__list-wrap">
+                                    <div class="footer-middle__list-wrap-inner">
+                                        <div class="footer-middle__list-title">Главная</div>
+                                        <ul class="footer-middle__list">
+                                            <li><a href="#">Каталог</a></li>
+                                            <li><a href="#">О&nbsp;нас</a></li>
+                                            <li><a href="contact.html">Контакты</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="footer-middle__list-wrap-inner">
+                                        <div class="footer-middle__list-title">Контакты</div>
+                                        <ul class="footer-middle__list">
+                                            <li><a href="mailto:team@clooly.ru">team@clooly.ru</a></li>
+                                            <li><a href="tel:89003344354">8 (900) 334 - 43 - 54</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="footer-middle__list-wrap-inner">
+                                        <div class="footer-middle__list-title">Документы</div>
+                                        <ul class="footer-middle__list">
+                                            <li><a href="#">Сертификаты</a></li>
+                                            <li><a href="#">Договор оферты</a></li>
+                                            <li><a href="#">Правила акций</a></li>
+                                            <li><a href="#">Отказ от ответственности</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="_cl footer-bottom">
+                        <div class="_row">
+                            <div class="_cl-l-5"><a href="#">Политика конфиденциальности</a></div>
+                            <div class="_cl-l-4"><a href="#">Пользовательское соглашение</a></div>
+                            <div class="_cl-l-3"><a href="#">Доставка и оплата</a></div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
