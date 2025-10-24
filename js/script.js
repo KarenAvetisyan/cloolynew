@@ -37,12 +37,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
                 const isShown = cartWrap.classList.toggle('_show');
                 overlay.classList.toggle('_active', isShown);
-
-                if (isShown) {
-                body.style.overflow = 'hidden'; // блокируем скролл
-                } else {
-                body.style.overflow = ''; // возвращаем как было
-                }
         });
 
         document.addEventListener('click', (e) => {
@@ -58,7 +52,6 @@ document.addEventListener('DOMContentLoaded', function(){
         overlay.addEventListener('click', () => {
                 cartWrap.classList.remove('_show');
                 overlay.classList.remove('_active');
-                body.style.overflow = ''; // разблокируем скролл
         });
         }
 

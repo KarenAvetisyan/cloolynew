@@ -486,6 +486,7 @@ body {
     background-color: #fff;
     border-radius: 20px;
     height: calc(100vh - 120px);
+    height: calc(100dvh - 120px);
     margin-left: auto;
     overflow: auto;
     padding: 30px;
@@ -699,6 +700,7 @@ body {
   .headerCart-item__wrap{
     top: 68px;
     height: calc(100vh - 88px);
+    height: calc(100dvh - 88px);
   }
   .headerCart-item__btn{
     margin-top: 0;
