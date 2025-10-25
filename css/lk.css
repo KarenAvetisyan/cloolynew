@@ -1,7 +1,8 @@
-.header{
-    background-color: transparent;
+@media (min-width: 992px) {
+    .header {
+        background-color: transparent;
+    }
 }
-
 ._blue{
     background-color: var(--blue);
 }
